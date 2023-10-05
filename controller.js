@@ -29,7 +29,7 @@ module.exports.register = async (req, res, next) => {
 module.exports.getprofile = async (req, res, next) => {
     try {
       // const { mobile } = req.body;
-      const { id } = req.query;
+      const { id } = req.body;
   
       const user = await prisma.user.findUnique({
         where: { id: parseInt(id) },
